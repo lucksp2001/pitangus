@@ -1,0 +1,242 @@
+/*----------------Configurações Gerais----------------*/
+.wrapper{
+    background: #FFDD00;
+    /*antes - position: fixed;
+      depois - position: absolute;  */
+    position: absolute;
+    width: 100%;
+}
+
+.wrapper nav{
+    position: relative;
+    display: flex;
+    max-width: calc(100%-200px);
+    height: 110px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .conteudo{
+    display: flex;
+    align-items: center;
+}
+
+/*********************************************************/
+
+/*------------Configurações do Ícone do Menu------------*/
+.wrapper .icone-menu{
+    color: #291810;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+}
+
+.wrapper #ativar-menu:checked ~ .icone-menu i::before{
+    content: "\f00d";
+}
+
+/*********************************************************/
+
+/*------------Configurações do Logo------------*/
+.conteudo .logo img{
+    height: 90px;
+}
+
+/*********************************************************/
+
+/*------------Configurações das Categorias------------*/
+.conteudo .categorias li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.conteudo .categorias li a:hover{
+    background: #542C14;
+}
+
+nav .conteudo .categorias{
+    margin-left: 80px;
+    display: flex;
+}
+
+.wrapper input[type="checkbox"]{
+    display: none;
+}
+
+/*********************************************************/
+
+/*------------Configurações do Menu Lateral------------*/
+/*Configurações Gerais*/
+.conteudo .menu-lateral li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.conteudo .menu-lateral li a:hover{
+    background: #542C14;
+}
+
+.conteudo .menu-lateral{
+    display: none;
+}
+
+/*Menu Lateral Aberto*/
+nav .conteudo .menu-lateral{
+    display: block;
+    /*antes - position: fixed;*/
+    position: absolute;
+    background: #291810 ;
+    /*antes - height: 100%*/
+    height: 800px;
+    /*antes - width: 100%*/
+    width: 100%;
+    top: 110px;
+    left: -100%;
+    margin-left: 0;
+    max-width: 380px;
+    max-height: 450px;
+    /*antes - max-height: 250px;*/
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+}
+
+nav #ativar-menu:checked ~ .conteudo .menu-lateral{
+    left: 0%;
+}
+
+.conteudo .menu-lateral li{
+    margin: 15px 20px
+}
+
+.conteudo .menu-lateral li a{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*Subcategorias - Ativadas*/
+.conteudo .menu-lateral ul{
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.conteudo .menu-lateral #mostrar-livros:checked ~ ul,
+.conteudo .menu-lateral #mostrar-ebooks:checked ~ ul,
+.conteudo .menu-lateral #mostrar-papelaria:checked ~ ul{
+    max-height: 100vh;
+}
+
+.conteudo .menu-lateral ul li{
+    margin: 7px 20px;
+}
+
+.conteudo .menu-lateral ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px!important;
+}
+
+/*********************************************************/
+
+/*------------Configurações das Labels------------*/
+.conteudo .menu-lateral li label{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
+    cursor: pointer;
+}
+
+.conteudo .menu-lateral li label{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.conteudo .menu-lateral li label:hover{
+    background: #714C3C;
+}
+
+.conteudo .menu-lateral li a.categorias-link{
+    display: none;
+}
+
+.conteudo .menu-lateral input{
+    display: none;
+}
+
+/*********************************************************/
+
+/*------------Configurações do Ícone de Busca------------*/
+.wrapper .icone-busca{
+    color: #291810;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+}
+
+/*Configurações do carrossel*/
+.home{
+    padding-top: 110px;
+}
+
+nav #ativar-menu:checked ~ .conteudo .home{
+    padding-left: 31.6%;
+}
+
+
+/*********************************************************/
+
+/*------------Responsividade------------*/
+@media screen and (max-width: 1250px) {
+    .wrapper nav{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    nav .conteudo .categorias{
+        margin-left: 30px;
+    }
+
+    .conteudo .categorias li a{
+        padding: 8px 13px; 
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .conteudo .categorias li a{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .wrapper nav{
+      padding: 0 10px;
+    }
+    .conteudo .logo a{
+      height: 80px;
+    }
+}

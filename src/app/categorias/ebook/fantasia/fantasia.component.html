@@ -1,0 +1,49 @@
+<!--BreadCrumb-->
+<div class="breadcrumb">
+    <nav>
+        <ol>
+            <li><a href="#" routerLink="/home">Home</a></li>
+            <li><a href="#" routerLink="/categorias">Categorias</a></li>
+            <li><a href="#" routerLink="/categorias/ebook">Ebooks</a></li>
+            <li><a href="#" routerLink="/categorias/ebook/fantasia">Fantasia</a></li>
+        </ol>
+    </nav>
+</div>
+
+
+<div class="body">
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "main-title">
+                <h1>Fantasia</h1>
+            </div>
+            <div class = "display-style-btns">
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-th"></i>
+                </button>
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-list-ul"></i>
+                </button>
+            </div>
+
+            <div class = "item-list" [ngClass] = "{'details-active' : !menu}">
+
+                <div class = "item" *ngFor="let fantasias of fantasia">
+                    <div class = "item-img">
+                        <img [src] = "fantasias.image" alt="imagem produto">
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">{{fantasias.name}}</a>
+                        <div class = "item-price">
+                            <span class = "new-price">{{fantasias.new_price}}</span>
+                            <span class = "old-price">{{fantasias.old_price}}</span>
+                        </div>
+                        <p>{{fantasias.description}}</p>
+                        <button type = "button" class = "add-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

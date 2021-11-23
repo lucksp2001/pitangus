@@ -1,0 +1,49 @@
+<!--BreadCrumb-->
+<div class="breadcrumb">
+    <nav>
+        <ol>
+            <li><a href="#" routerLink="/home">Home</a></li>
+            <li><a href="#" routerLink="/categorias">Categorias</a></li>
+            <li><a href="#" routerLink="/categorias/papelaria">Papelaria</a></li>
+            <li><a href="#" routerLink="/categorias/papelaria/modelagem">Materiais de Modelagem</a></li>
+        </ol>
+    </nav>
+</div>
+
+
+<div class="body">
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "main-title">
+                <h1>Materiais de Modelagem</h1>
+            </div>
+            <div class = "display-style-btns">
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-th"></i>
+                </button>
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-list-ul"></i>
+                </button>
+            </div>
+
+            <div class = "item-list" [ngClass] = "{'details-active' : !menu}">
+
+                <div class = "item" *ngFor="let massas of massa">
+                    <div class = "item-img">
+                        <img [src] = "massas.image" alt="imagem produto">
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">{{massas.name}}</a>
+                        <div class = "item-price">
+                            <span class = "new-price">{{massas.new_price}}</span>
+                            <span class = "old-price">{{massas.old_price}}</span>
+                        </div>
+                        <p>{{massas.description}}</p>
+                        <button type = "button" class = "add-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

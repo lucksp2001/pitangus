@@ -1,0 +1,51 @@
+<!--BreadCrumb-->
+<div class="breadcrumb">
+    <nav>
+        <ol>
+            <li><a href="#" routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li><a href="#" routerLink="/categorias" routerLinkActive="active">Categorias</a></li>
+            <li><a href="#" routerLink="/categorias/livros" routerLinkActive="active">Livros</a></li>
+            <li><a href="#" routerLink="/categorias/livros/ciencias" routerLinkActive="active">Ciências</a></li>
+        </ol>
+    </nav>
+</div>
+
+
+<div class="body">
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "main-title">
+                <h1>Ciências</h1>
+            </div>
+            <div class = "display-style-btns">
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-th"></i>
+                </button>
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-list-ul"></i>
+                </button>
+            </div>
+
+            <div class = "item-list" [ngClass] = "{'details-active' : !menu}">
+
+                <div class = "item" *ngFor="let ciencias of ciencia">
+                    <div class = "item-img">
+                        <img [src] = "ciencias.image" alt="imagem produto">
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">{{ciencias.name}}</a>
+                        <div class = "item-price">
+                            <span class = "new-price">{{ciencias.new_price}}</span>
+                            <span class = "old-price">{{ciencias.old_price}}</span>
+                        </div>
+                        <p>{{ciencias.description}}</p>
+                        <button type = "button" class = "add-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

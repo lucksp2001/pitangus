@@ -1,0 +1,261 @@
+<!--Objetivos: Resolver a questão dos botões do menu (tire o details-active para mudar a aparência) - utilize as diretiva
+    [ngClass]
+
+Link do repositorio: https://github.com/prabinmagar/product-grid-view-change-html-css-js
+Link do vídeo: https://www.youtube.com/watch?v=8mikd4_TORw&t=887s
+
+-->
+
+<div class="body">
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "main-title">
+                <h1>HQs e Mangás</h1>
+            </div>
+            <div class = "display-style-btns">
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-th"></i>
+                </button>
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-list-ul"></i>
+                </button>
+            </div>
+
+            <div class = "item-list" [ngClass] = "{'details-active' : !menu}">
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">Accent Chair</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">Beds</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">bookshelves</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">Batman Noir</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">Cube Storage</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">Dining room set</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">Dressers</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">Futons</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+
+                <div class = "item">
+                    <div class = "item-img">
+                        <img src = "/assets/livros/hqs-mangas/batman-noir.jpg">
+                        <div class = "icon-list">
+                            <button type = "button">
+                                <i class = "fas fa-sync-alt"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button">
+                                <i class = "far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">Nightstands</a>
+                        <div class = "item-price">
+                            <span class = "new-price">$220.00</span>
+                            <span class = "old-price">$275.60</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quod corporis delectus sequi laudantium molestias vero distinctio, qui numquam dolore, corrupti, enim consectetur cum?</p>
+                        <button type = "button" class = "add-btn">add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

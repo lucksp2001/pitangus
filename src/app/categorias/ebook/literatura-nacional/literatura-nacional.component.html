@@ -1,0 +1,49 @@
+<!--BreadCrumb-->
+<div class="breadcrumb">
+    <nav>
+        <ol>
+            <li><a href="#" routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li><a href="#" routerLink="/categorias" routerLinkActive="active">Categorias</a></li>
+            <li><a href="#" routerLink="/categorias/ebook" routerLinkActive="active">Ebooks</a></li>
+            <li><a href="#" routerLink="/categorias/ebook/literatura-nacional" routerLinkActive="active">Literatura Nacional</a></li>
+        </ol>
+    </nav>
+</div>
+
+
+<div class="body">
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "main-title">
+                <h1>Literatura Nacional</h1>
+            </div>
+            <div class = "display-style-btns">
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-th"></i>
+                </button>
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-list-ul"></i>
+                </button>
+            </div>
+
+            <div class = "item-list" [ngClass] = "{'details-active' : !menu}">
+
+                <div class = "item" *ngFor="let nacionais of nacional">
+                    <div class = "item-img">
+                        <img [src] = "nacionais.image" alt="imagem produto">
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">{{nacionais.name}}</a>
+                        <div class = "item-price">
+                            <span class = "new-price">{{nacionais.new_price}}</span>
+                            <span class = "old-price">{{nacionais.old_price}}</span>
+                        </div>
+                        <p>{{nacionais.description}}</p>
+                        <button type = "button" class = "add-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

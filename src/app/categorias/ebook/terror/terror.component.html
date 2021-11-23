@@ -1,0 +1,49 @@
+<!--BreadCrumb-->
+<div class="breadcrumb">
+    <nav>
+        <ol>
+            <li><a href="#" routerLink="/home">Home</a></li>
+            <li><a href="#" routerLink="/categorias">Categorias</a></li>
+            <li><a href="#" routerLink="/categorias/ebook">Ebooks</a></li>
+            <li><a href="#" routerLink="/categorias/ebook/terror">Terror</a></li>
+        </ol>
+    </nav>
+</div>
+
+
+<div class="body">
+    <div class = "main-wrapper">
+        <div class = "container">
+            <div class = "main-title">
+                <h1>Terror</h1>
+            </div>
+            <div class = "display-style-btns">
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-th"></i>
+                </button>
+                <button type = "button" (click)="aberto()">
+                    <i class = "fas fa-list-ul"></i>
+                </button>
+            </div>
+
+            <div class = "item-list" [ngClass] = "{'details-active' : !menu}">
+
+                <div class = "item" *ngFor="let terrores of terror">
+                    <div class = "item-img">
+                        <img [src] = "terrores.image" alt="imagem produto">
+                    </div>
+                    <div class = "item-detail">
+                        <a href = "#" class = "item-name">{{terrores.name}}</a>
+                        <div class = "item-price">
+                            <span class = "new-price">{{terrores.new_price}}</span>
+                            <span class = "old-price">{{terrores.old_price}}</span>
+                        </div>
+                        <p>{{terrores.description}}</p>
+                        <button type = "button" class = "add-btn">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
